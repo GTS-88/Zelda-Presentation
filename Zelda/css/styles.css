@@ -1,0 +1,129 @@
+/* ======== VARIABLES DE COLOR ======== */
+:root {
+  --botw-cielo: #89c7d8;
+  --botw-cielo-claro: #aed9e6;
+  --botw-montana: #dcd0b4; /* arena/montaña */
+  --arena: #fdffe0;
+  --dorado: #D4AF37;
+  --negro: #1A1A1A;
+  --blanco: #FFFBF2;
+  --titulo-azul: #143f6b; /* azul profundo BOTW */
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ======== FONDO PANTALLA ======== */
+body {
+  font-family: "Bitter", serif;
+
+  min-height: 100vh;
+  color: var(--negro);
+}
+
+/* ======== PANTALLA COMPLETA ======== */
+.screen {
+    background-image: url("../img/fondo_zelda.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 60px;
+  min-height: 100vh;
+}
+
+/* ======== TITULO PRINCIPAL ======== */
+.title {
+  background: var(--titulo-azul);
+  opacity: 0.7;
+  color: var(--blanco);
+  padding: 30px 50px;
+  border-radius: 12px;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 6px solid var(--dorado);
+  box-shadow: 10px 10px 0 rgba(0,0,0,0.5);
+}
+
+.subtitle {
+  display: block;
+  font-size: 0.35em;
+  opacity: 0.95;
+  letter-spacing: 3px;
+}
+
+/* ======== GRID ======== */
+.grid {
+  width: 100%;
+  max-width: 1600px;
+  display: grid;
+  gap: 40px;
+
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+}
+
+.card:nth-child(7) {
+  grid-column: 2 / 2;        
+}
+
+/* ======== TARJETAS (CARDS) ======== */
+.card {
+  background: var(--arena);
+  opacity: 0.8;
+  padding: 40px;
+  border-radius: 18px;
+  border: 5px solid var(--dorado);
+  box-shadow: 12px 12px 0 rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  min-height: 260px;
+  width: 500px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+    margin-right: 50px;
+}
+
+/* estados */
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 18px 18px 0 rgba(0,0,0,0.65);
+}
+
+/* Texto dentro */
+.card-title {
+  font-size: clamp(2rem, 3vw, 3rem); /* TITULO GRANDE */
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.card-sub {
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+/* ======== FOOTER ======== */
+.footer {
+  margin-top: auto;
+  background: rgba(0,0,0,0.35);
+  padding: 14px;
+  text-align: center;
+  color: var(--blanco);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
