@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/datos.css">
+    <!-- NUEVO: estilos específicos de esta página -->
+    <link rel="stylesheet" href="../css/sonido.css">
 </head>
 
 <body>
@@ -24,7 +26,7 @@
 
     <header class="section-title">
         <h1>4. Sonido y música</h1>
-        <p class="section-sub" style="text-shadow: 2px 2px 4px #ffffff; background-color: rgba(255,255,255,0.6); padding: 5px 15px; border-radius: 12px; display: inline-block;">
+        <p class="section-sub">
             Atmósfera · Piano Minimalista · Diseño Sistémico
         </p>
     </header>
@@ -32,24 +34,22 @@
     <section class="datos-grid">
 
         <article class="datos-card" data-card="tipos-sonido">
-            <img class="datos-card-img" src="../img/tiposdesonido.jpg" alt="Ambiente" style="min-height: 180px; background-color: #0f5e9c; object-fit: cover;">
+            <img class="datos-card-img" src="../img/tiposdesonido.jpg" alt="Ambiente">
             <div class="datos-card-title">Tipos de Sonido</div>
             <div class="datos-card-sub">Ambiente · Efectos · Foley</div>
         </article>
 
         <article class="datos-card" data-card="instrumentos">
-            <img class="datos-card-img" src="../img/instrumentacion.png" alt="Instrumentos" style="min-height: 180px; background-color: #0f5e9c; object-fit: cover;">
+            <img class="datos-card-img" src="../img/instrumentacion.png" alt="Instrumentos">
             <div class="datos-card-title">Instrumentación</div>
             <div class="datos-card-sub">Piano · Étnicos · Orquesta</div>
         </article>
 
         <article class="datos-card" data-card="relevancia">
-            <img class="datos-card-img" src="../img/relevanciamusical.png" alt="Relevancia" style="min-height: 180px; background-color: #0f5e9c; object-fit: cover;">
+            <img class="datos-card-img" src="../img/relevanciamusical.png" alt="Relevancia">
             <div class="datos-card-title">Relevancia Musical</div>
             <div class="datos-card-sub">Narrativa · Inmersión · IA</div>
         </article>
-
-
 
     </section>
 </main>
@@ -152,34 +152,8 @@
     Selecciona una tarjeta para ampliar · Pulsa ESC para cerrar modales
 </footer>
 
-<script>
-    // Abrir modales
-    document.querySelectorAll('.datos-card').forEach(card => {
-        card.addEventListener('click', () => {
-            const id = card.getAttribute('data-card');
-            if(id) {
-                const modal = document.getElementById('modal-' + id);
-                if (modal) modal.classList.add('active');
-            }
-        });
-    });
-
-    // Cerrar modales (Botón X)
-    document.querySelectorAll('.modal-close').forEach(btn => {
-        btn.addEventListener('click', () => {
-            btn.closest('.intro-modal').classList.remove('active');
-        });
-    });
-
-    // Cerrar modales (Tecla ESC)
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            document.querySelectorAll('.intro-modal').forEach(modal => {
-                modal.classList.remove('active');
-            });
-        }
-    });
-</script>
+<!-- NUEVO: JS externo -->
+<script src="../js/sonido.js"></script>
 
 </body>
 </html>

@@ -1,72 +1,75 @@
 :root {
+      --titulo-azul: #143f6b;
+      --blanco: #FFFBF2;
       --azul: #0f5e9c;
       --dorado: #d4af37;
       --arena: #f4ead6;
       --sh-shadow: 8px 8px 0 rgba(0,0,0,.6);
     }
 
-    /* 1. CONFIGURACIÓN DE PANTALLA ÚNICA TOTALMENTE CENTRADA */
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      width: 100vw;
-      font-family: 'Bitter', serif;
-      overflow: hidden; /* Prohibido el scroll */
-      background: #0a0a0a;
-    }
-
     .logica-screen {
-      height: 100vh;
+      min-height: 100vh;
+      padding-bottom: 60px;
       display: flex;
       flex-direction: column;
-      /* CENTRADO TOTAL */
-      justify-content: center; 
       align-items: center;
-      
+      justify-content: flex-start; 
       box-sizing: border-box;
-      padding: 2vh 2vw;
-      /* Fondo con la imagen solicitada */
-      background: linear-gradient(rgba(0, 10, 30, 0.4), rgba(0, 10, 30, 0.4)),
-                  url("https://easycdn.es/1/imagenes/the-legend-of-zelda-breath-of-the-wild_341487.jpg") center/cover no-repeat;
+      background-image: url("../img/logica.jpg") !important;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+
     }
 
     /* 2. CABECERA COMPACTA Y CENTRADA */
     .section-title {
+      margin-top: 40px;    
+      margin-bottom: 30px; 
       text-align: center;
-      flex-shrink: 0;
-      margin-bottom: 5vh; /* Espacio equilibrado con las tarjetas */
     }
+
 
     .section-title h1 {
-      background: var(--azul);
-      color: white;
-      padding: 12px 35px;
+      background: var(--titulo-azul);
+      color: var(--blanco);
+      padding: 20px 40px;
+      border-radius: 10px;
       border: 4px solid var(--dorado);
-      display: inline-block;
-      border-radius: 12px;
-      font-size: clamp(1.4rem, 3.8vw, 2.8rem);
-      box-shadow: var(--sh-shadow);
-      margin: 0;
+      text-transform: uppercase;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      text-align: center;
+      box-shadow: 8px 8px 0 rgba(0,0,0,0.45);
     }
-
+    
     .section-sub {
-      color: var(--arena);
+      font-size: clamp(1rem, 2vw, 1.6rem);
       margin-top: 10px;
-      font-size: clamp(0.9rem, 1.5vw, 1.2rem);
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
-      letter-spacing: 1px;
+      text-shadow: 2px 2px 4px #ffffff;
+      background-color: rgba(255, 255, 255, 0.6);
+      padding: 5px 15px;
+      border-radius: 12px;
+      display: inline-block;
+      
+}
+
+    /* 3. GRID  */
+    .logic-grid {
+      width: 100%;
+      max-width: 80%;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(420px, 1fr));
+      gap: 20px;
+      justify-content: center;
+      margin-top: 1rem;
     }
 
-    /* 3. GRID DE 5 TARJETAS EN UNA FILA */
-    .logic-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 20px;
-      flex-grow: 0; 
-      max-width: 1350px;
-      width: 100%;
-    }
+    .logic-card:nth-child(4),
+    .logic-card:nth-child(5) {
+      grid-column: span 1;
+  }
+
 
     .logic-card {
       background: var(--arena);
@@ -80,6 +83,15 @@
       flex-direction: column;
       max-height: 50vh;
     }
+
+    .logic-card:nth-child(4) {
+      grid-column: 1 / 1;        
+    }
+
+    .logic-card:nth-child(5) {
+      grid-column: 3 / 3;        
+    }
+
 
     .logic-card:hover {
       transform: translateY(-10px) scale(1.02);
@@ -111,65 +123,120 @@
       margin: 0;
     }
 
-    /* 4. MODALES (INFORMACIÓN DETALLADA) */
-    .logic-modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,.85);
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-      backdrop-filter: blur(8px);
-    }
 
-    .logic-modal.active { display: flex; }
+    /* ===== NAVEGACIÓN ENTRE PÁGINAS ===== */
+.nav-pages {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none; /* evita bloquear clics sobre el contenido */
+  z-index: 9999;
+}
 
-    .modal-content {
-      background: var(--arena);
-      border: 5px solid var(--dorado);
-      border-radius: 18px;
-      padding: 35px;
-      max-width: 650px;
-      width: 85%;
-      position: relative;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-      animation: fadeInUp 0.3s ease-out;
-    }
+/* Home arriba a la izquierda */
+.nav-home {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: transparent;
+  border: none;
+  pointer-events: auto;
+}
+.nav-home img {
+  width: 60px;
+  height: 60px;
+}
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+/* Flechas izquierda / derecha */
+.nav-btn {
+  background: rgba(0,0,0,.55);
+  color: white;
+  font-size: 3.5rem;
+  padding: 16px 28px;
+  border-radius: 14px;
+  border: 4px solid var(--dorado);
+  cursor: pointer;
+  pointer-events: auto;
+  text-decoration: none;
+  box-shadow: 8px 8px 0 rgba(0,0,0,.5);
+  transition: transform .25s ease, background .25s ease;
+}
 
-    .modal-content h2 {
-      background: var(--azul);
-      color: white;
-      padding: 15px;
-      border-radius: 8px;
-      margin-top: 0;
-      text-align: center;
-      border-bottom: 3px solid var(--dorado);
-    }
+.nav-btn:hover {
+  background: var(--dorado);
+  color: var(--negro);
+  transform: scale(1.15);
+}
 
-    .modal-content ul { font-size: 1.3rem; line-height: 1.6; color: #1a1a1a; padding-left: 20px; }
-    .modal-content li { margin-bottom: 12px; }
-    .modal-content strong { color: var(--azul); }
+/* Espaciado natural en bordes */
+.nav-prev { margin-left: 20px; }
+.nav-next { margin-right: 20px; }
 
-    .modal-close {
-      position: absolute;
-      top: -15px;
-      right: -15px;
-      background: #c0392b;
-      color: white;
-      border: 3px solid var(--dorado);
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 1.2rem;
-      transition: transform 0.2s;
-    }
 
-    .modal-close:hover { transform: scale(1.1); }
+  /* 4. MODALES (INFORMACIÓN DETALLADA) */
+  .logic-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(8px);
+  }
+
+  .logic-modal.active { display: flex; }
+
+  .modal-content {
+    background: var(--arena);
+    border: 5px solid var(--dorado);
+    border-radius: 18px;
+    padding: 35px;
+    max-width: 650px;
+    width: 85%;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    animation: fadeInUp 0.3s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .modal-content h2 {
+    background: var(--azul);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 0;
+    text-align: center;
+    border-bottom: 3px solid var(--dorado);
+  }
+
+  .modal-content ul { font-size: 1.3rem; line-height: 1.6; color: #1a1a1a; padding-left: 20px; }
+  .modal-content li { margin-bottom: 12px; }
+  .modal-content strong { color: var(--azul); }
+
+  .modal-close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: #c0392b;
+    color: white;
+    border: 3px solid var(--dorado);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: transform 0.2s;
+  }
+
+  .modal-close:hover { transform: scale(1.8); }

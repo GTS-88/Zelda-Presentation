@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/datos.css">
+    <link rel="stylesheet" href="../css/visual.css">
 </head>
 
 <body>
@@ -24,27 +25,27 @@
 
     <header class="section-title">
         <h1>3. Apartado visual y artístico</h1>
-        <p class="section-sub" style="text-shadow: 2px 2px 4px #000; background-color: rgba(0,0,0,0.6); padding: 5px 15px; border-radius: 12px; display: inline-block; color: white;">
+        <p class="section-sub">
             Estilo "Open Air" · Inspiración Jomon · Motor de Química
         </p>
     </header>
 
-    <section class="datos-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; width: 100%; max-width: 1600px;">
+    <section class="datos-grid">
 
         <article class="datos-card" data-card="estilo">
-            <img class="datos-card-img" src="../img/estilografico.png" alt="Estilo Open Air" style="min-height: 180px; background-color: #536f50; object-fit: cover; width: 100%;">
+            <img class="datos-card-img" src="../img/estilografico.png" alt="Estilo Open Air">
             <div class="datos-card-title">Estilo Gráfico</div>
             <div class="datos-card-sub">"Open Air" - Cel-shading - Gouache</div>
         </article>
 
         <article class="datos-card" data-card="diseno">
-            <img class="datos-card-img" src="../img/disenoyarte.png" alt="Diseño Sheikah" style="min-height: 180px; background-color: #536f50; object-fit: cover; width: 100%;">
+            <img class="datos-card-img" src="../img/disenoyarte.png" alt="Diseño Sheikah">
             <div class="datos-card-title">Diseño y Arte</div>
             <div class="datos-card-sub">Arte Jomon - Rediseño de Link</div>
         </article>
 
         <article class="datos-card" data-card="innovacion">
-            <img class="datos-card-img" src="../img/innovacion.png" alt="Física y Clima" style="min-height: 180px; background-color: #536f50; object-fit: cover; width: 100%;">
+            <img class="datos-card-img" src="../img/innovacion.png" alt="Física y Clima">
             <div class="datos-card-title">Innovaciones Técnicas </div>
             <div class="datos-card-sub">Motor de Química - Escala masiva</div>
         </article>
@@ -125,31 +126,7 @@
     Selecciona una tarjeta para ampliar · Pulsa ESC para cerrar modales
 </footer>
 
-<script>
-    document.querySelectorAll('.datos-card').forEach(card => {
-        card.addEventListener('click', () => {
-            const id = card.getAttribute('data-card');
-            if(id) {
-                const modal = document.getElementById('modal-' + id);
-                if (modal) modal.classList.add('active');
-            }
-        });
-    });
-
-    document.querySelectorAll('.modal-close').forEach(btn => {
-        btn.addEventListener('click', () => {
-            btn.closest('.intro-modal').classList.remove('active');
-        });
-    });
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            document.querySelectorAll('.intro-modal').forEach(modal => {
-                modal.classList.remove('active');
-            });
-        }
-    });
-</script>
+<script src="../js/visual.js"></script>
 
 </body>
 </html>

@@ -20,35 +20,37 @@
 /* ======== FONDO PANTALLA ======== */
 body {
   font-family: "Bitter", serif;
-
   min-height: 100vh;
   color: var(--negro);
 }
 
 /* ======== PANTALLA COMPLETA ======== */
 .screen {
-    background-image: url("../img/fondo_zelda.png");
+  background-image: url("../img/fondo_zelda.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 40px 20px;
-  gap: 60px;
+  justify-content: flex-start;
   min-height: 100vh;
+  padding: 1rem;
+  height: 100vh;
 }
 
 /* ======== TITULO PRINCIPAL ======== */
 .title {
+  margin-top: 0.5rem;    
+  margin-bottom: 0.8rem; 
   background: var(--titulo-azul);
   opacity: 0.7;
   color: var(--blanco);
   padding: 30px 50px;
   border-radius: 12px;
-  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-size: clamp(1.5rem, 8vw, 3rem);
   font-weight: 600;
   letter-spacing: 4px;
   text-align: center;
@@ -69,8 +71,8 @@ body {
   width: 100%;
   max-width: 1600px;
   display: grid;
+  justify-content: center;
   gap: 40px;
-
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
 }
 
@@ -88,12 +90,13 @@ body {
   box-shadow: 12px 12px 0 rgba(0,0,0,0.5);
   cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  min-height: 260px;
-  width: 500px; 
+  height: 22vh;
+  width: 100%; 
   display: flex;
   flex-direction: column;
   justify-content: center;
-    margin-right: 50px;
+  margin-top: 0.9rem;
+  
 }
 
 /* estados */
@@ -127,3 +130,56 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+
+/* ===== NAVEGACIÓN ENTRE PÁGINAS ===== */
+.nav-pages {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none; /* evita bloquear clics sobre el contenido */
+  z-index: 9999;
+}
+
+/* Home arriba a la izquierda */
+.nav-home {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: transparent;
+  border: none;
+  pointer-events: auto;
+}
+.nav-home img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Flechas izquierda / derecha */
+.nav-btn {
+  background: rgba(0,0,0,.55);
+  color: var(--blanco);
+  font-size: 3.5rem;
+  padding: 16px 28px;
+  border-radius: 14px;
+  border: 4px solid var(--dorado);
+  cursor: pointer;
+  pointer-events: auto;
+  text-decoration: none;
+  box-shadow: 8px 8px 0 rgba(0,0,0,.5);
+  transition: transform .25s ease, background .25s ease;
+}
+
+.nav-btn:hover {
+  background: var(--dorado);
+  color: var(--negro);
+  transform: scale(1.15);
+}
+
+/* Espaciado natural en bordes */
+.nav-prev { margin-left: 20px; }
+.nav-next { margin-right: 20px; }
