@@ -5,7 +5,8 @@
   --zelda-dorado-oscuro: #b38b24;
   --zelda-arena: #f4ead6;
   --zelda-arena-oscuro: #e5d6b8;
-   --zelda-verde: #536f50;
+  --zelda-verde: #536f50;
+  --blanco: #FFFBF2;
 }
 
 
@@ -21,7 +22,7 @@
   align-items: center;
   justify-content: flex-start;
   min-height: 100vh;
-  padding-bottom: 60px;
+  padding-bottom: 1rem;
 }
 
 
@@ -55,9 +56,9 @@
   max-width: 80%;
   display: grid;
   grid-template-columns: repeat(3, minmax(420px, 1fr));
-  gap: 4rem;
+  gap: 20px;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 
@@ -75,7 +76,7 @@
   background: transparent;
   border: none;
   max-width: 1fr;
-  max-height: 320px;
+  max-height: 15vh;
   box-shadow: none;
   cursor: default;
 }
@@ -110,26 +111,32 @@
 
 .datos-card-img {
   width: 100%;
-  height: 240px;
+  height: 15vh;
   object-fit: cover
 }
 
 
 .datos-card-title {
-  padding: 16px 20px;
-  font-size: 2rem;
+  padding: 12px 5px;
+  font-size: clamp(0.85rem, 1.1vw, 1.2rem);
+  margin: 0;
   background: var(--zelda-azul-oscuro);
   color: var(--blanco);
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 
 .datos-card-sub {
-  background: var(--zelda-azul);
-  color: var(--blanco);
+  opacity: 1;
+  font-weight: 700;
+  text-align: center;
+  background: var(--blanco);
+  color: var(--zelda-azul-oscuro);
   padding: 12px 20px 20px 20px;
-  font-size: 1.2rem;
+  font-size: clamp(0.75rem, 0.9vw, 1rem);
+  margin: 0;
 
 }
 
@@ -475,3 +482,4 @@
     padding: 10px 16px;
   }
 }
+
