@@ -8,7 +8,7 @@
    --zelda-verde: #536f50;
 }
 
-/* ===== DATOS TÉCNICOS — PANTALLA ===== */
+
 
 .datos-screen {
   background-image: url("../img/datos.png");
@@ -19,16 +19,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* <-- SUBE EL CONTENIDO */
+  justify-content: flex-start;
   min-height: 100vh;
   padding-bottom: 60px;
 }
 
-/* ===== TÍTULO ===== */
+
 
 .section-title {
-  margin-top: 40px;    /* <-- menos espacio arriba */
-  margin-bottom: 30px; /* <-- tarjetas más arriba */
+  margin-top: 40px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -49,7 +49,7 @@
   margin-top: 10px;
 }
 
-/* ===== GRID TARJETAS ===== */
+
 .datos-grid {
   width: 100%;
   max-width: 80%;
@@ -60,7 +60,7 @@
   margin-top: 3rem;
 }
 
-/* === segunda fila === */
+
 
 
 .datos-card:nth-child(4),
@@ -80,7 +80,7 @@
   cursor: default;
 }
 
-/* centrar el bloque de dos tarjetas */
+
 .datos-card:nth-child(4) {
   grid-column: 1 / 1;        
 }
@@ -88,7 +88,7 @@
 .datos-card:nth-child(6) {
   grid-column: 3 / 3;        
 }
-/* ===== TARJETAS ===== */
+
 
 .datos-card {
   opacity: 0.9;
@@ -107,14 +107,14 @@
   box-shadow: 14px 14px 0 rgba(0,0,0,0.55);
 }
 
-/* Imagen */
+
 .datos-card-img {
   width: 100%;
   height: 240px;
   object-fit: cover
 }
 
-/* Título */
+
 .datos-card-title {
   padding: 16px 20px;
   font-size: 2rem;
@@ -124,7 +124,7 @@
   letter-spacing: 1px;
 }
 
-/* Subtítulo */
+
 .datos-card-sub {
   background: var(--zelda-azul);
   color: var(--blanco);
@@ -133,14 +133,14 @@
 
 }
 
-/* ===== RESPONSIVE ===== */
+
 
 @media (max-width: 1300px) {
   .datos-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .datos-card:nth-child(5) {
-    grid-column: span 2; /* ocupa fila completa */
+    grid-column: span 2;
   }
 }
 
@@ -153,7 +153,7 @@
   }
 }
 
-/* ===== MODALES ===== */
+
 .intro-modal {
   display: none;
   position: fixed;
@@ -169,7 +169,7 @@
   animation: modal-fade .35s ease;
 }
 
-/* ---------- CONTENIDO DEL MODAL OCUPA MÁS ALTURA ---------- */
+
 .modal-content {
   background: var(--zelda-arena);
   border: 6px solid var(--zelda-dorado);
@@ -178,21 +178,21 @@
   max-width: 1600px;
   width: 92%;
 
-  /* CAMBIOS IMPORTANTES */
-  height: 82vh;              /* más alto que antes */
+
+  height: 82vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 
   box-shadow: 18px 18px 0 rgba(0,0,0,0.65);
-  font-size: 1.9rem;         /* fuente más grande */
+  font-size: 1.9rem;
   line-height: 1.7;
   position: relative;
   animation: modal-zoom .35s ease;
 }
 
 .modal-content h2 {
-  font-size: 3.6rem;         /* más grande */
+  font-size: 3.6rem;
   margin-bottom: 40px;
   text-align: center;
   background: var(--zelda-azul);
@@ -205,13 +205,13 @@
   box-shadow: 6px 6px 0 rgba(0,0,0,0.45);
 }
 
-/* BOTÓN CERRAR */
+
 .modal-close {
   background: var(--zelda-verde);
   color: white;
   border: none;
   padding: 14px 20px;
-  font-size: 1.6rem;         /* más grande */
+  font-size: 1.6rem;
   position: absolute;
   top: 18px;
   right: 18px;
@@ -220,16 +220,16 @@
   transition: background .25s;
 }
 
-/* ---------- PILLAR LIST SE EXPANDE COMO COLUMNA COMPLETA ---------- */
+
 .pillar-list {
-  flex: 1;                    /* ocupa todo el espacio vertical disponible */
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;  /* reparte los pilares de arriba a abajo */
+  justify-content: space-evenly;
   gap: 30px;
 }
 
-/* ---------- CADA PILLAR MÁS GRANDE Y ESPACIADO ---------- */
+
 .pillar {
   display: flex;
   gap: 32px;
@@ -260,7 +260,7 @@
   transform: translateX(14px);
 }
 
-/* ICONOS MÁS GRANDES */
+
 .pillar-icon {
   width: 95px;
   height: 95px;
@@ -271,7 +271,7 @@
   box-shadow: 4px 4px 0 rgba(0,0,0,0.4);
 }
 
-/* TIPOGRAFÍA */
+
 .pillar-title {
   font-size: 2.1rem;
   font-weight: 700;
@@ -286,7 +286,7 @@
   color: #222;
 }
 
-/* ===== MODAL VERSIONES — 3 columnas ===== */
+
 
 .pillar-hero {
   width: 90%;
@@ -299,7 +299,7 @@
   box-shadow: 10px 10px 0 rgba(0,0,0,.45);
 }
 
-/* fila con las 3 */
+
 .pillar-row {
   
   display: grid;
@@ -308,7 +308,7 @@
   margin-top: 10px;
 }
 
-/* columnas más grandes y centradas */
+
 .pillar-col {
   height: 100%;
   text-align: center;
@@ -321,36 +321,36 @@
   margin-bottom: 14px;
 }
 
-/* Alinear a la izquierda */
+
 .pillar-text,
 .pillar-title,
 .pillar-info {
   text-align: left;
 }
 
-/* Más grande + mayor peso */
+
 .pillar-title {
-  font-size: 1.4rem;   /* antes ~1.2rem */
-  font-weight: 700;    /* negrita fuerte */
+  font-size: 1.4rem;
+  font-weight: 700;
   display: block;
   margin-bottom: 8px;
 }
 
 .pillar-info {
-  font-size: 1.4rem;  /* texto más grande */
-  font-weight: 700;    /* un poco más grueso */
-  line-height: 1.6;    /* más respiración */
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.6;
 }
 
 
-/* responsive */
+
 @media (max-width: 980px) {
   .pillar-row {
     grid-template-columns: 1fr;
   }
 }
 
-/* ===== COMPARATIVA VISUAL ===== */
+
 .compare-row {
   width: 100%;
   height: 100%;
@@ -375,7 +375,7 @@
   transform: translateY(-8px);
 }
 
-/* ICONO */
+
 .compare-icon {
   width: 90%;
   height: 400px;
@@ -386,7 +386,7 @@
   background: white;
 }
 
-/* TITULO */
+
 .compare-title {
   display: block;
   font-size: 2rem;
@@ -394,7 +394,7 @@
   margin-bottom: 6px;
 }
 
-/* SUBTITULO / datos técnicos */
+
 .compare-sub {
   display: block;
   font-size: 1.45rem;
@@ -403,19 +403,19 @@
   color: var(--zelda-azul-oscuro);
 }
 
-/* INFO corta */
+
 .compare-info {
   font-size: 1.25rem;
   opacity: .9;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 960px) {
   .compare-row {
     flex-direction: column;
   }
 }
-/* ===== NAVEGACIÓN ENTRE PÁGINAS ===== */
+
 .nav-pages {
   position: fixed;
   top: 50%;
@@ -425,11 +425,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  pointer-events: none; /* evita bloquear clics sobre el contenido */
+  pointer-events: none;
   z-index: 9999;
 }
 
-/* Home arriba a la izquierda */
+
 .nav-home {
   position: fixed;
   top: 20px;
@@ -443,7 +443,7 @@
   height: 60px;
 }
 
-/* Flechas izquierda / derecha */
+
 .nav-btn {
   background: rgba(0,0,0,.55);
   color: var(--blanco);
@@ -464,11 +464,11 @@
   transform: scale(1.15);
 }
 
-/* Espaciado natural en bordes */
+
 .nav-prev { margin-left: 20px; }
 .nav-next { margin-right: 20px; }
 
-/* Responsive */
+
 @media (max-width: 800px) {
   .nav-btn {
     font-size: 2.4rem;
