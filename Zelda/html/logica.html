@@ -7,6 +7,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/logica.css">
   <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/datos.css">
+  <link rel="stylesheet" href="../css/intro.css">
+
 </head>
 
 <body>
@@ -68,67 +71,187 @@
   </section>
 </main>
 
+<!-- GÉNERO -->
 <div id="modal-genero" class="logic-modal">
-  <div class="modal-content">
+  <div class="modal-content modal-publicacion-content">
     <button class="modal-close">X</button>
+
     <h2>Género y Estilo</h2>
-    <ul>
-      <li><strong>Mundo Abierto:</strong> Acceso total desde el inicio.</li>
-      <li><strong>Diseño No Lineal:</strong> El jugador decide su propia ruta.</li>
-      <li><strong>Aventura Sistémica:</strong> Reglas lógicas constantes.</li>
-    </ul>
+
+    <div class="pub-grid">
+
+      <div class="pub-item pub-vertical">
+        <img class="pub-img" src="../img/logic_genero_mundo_abierto.jpg" alt="Mundo Abierto">
+        <span class="pub-label">Mundo Abierto</span>
+        <span class="pub-value">Acceso total desde el inicio.</span>
+      </div>
+
+      <div class="pub-item pub-vertical">
+        <img class="pub-img" src="../img/logic_genero_no_lineal.jpg" alt="Diseño No Lineal">
+        <span class="pub-label">Diseño No Lineal</span>
+        <span class="pub-value">El jugador decide su propia ruta.</span>
+      </div>
+
+      <div class="pub-item pub-vertical">
+        <img class="pub-img" src="../img/logic_genero_aventura_sistemica.jpg" alt="Aventura Sistémica">
+        <span class="pub-label">Aventura Sistémica</span>
+        <span class="pub-value">Reglas lógicas constantes.</span>
+      </div>
+
+    </div>
+
   </div>
 </div>
 
+<!-- MECÁNICAS -->
 <div id="modal-mecanicas" class="logic-modal">
   <div class="modal-content">
     <button class="modal-close">X</button>
-    <div class="modal-body">
-      <h2>Mecánicas Principales</h2>
-      <ul>
-        <li><strong>Movimiento:</strong> Escalar, planear (paravela), nadar.</li>
-        <li><strong>Motor de Física:</strong> Interacción realista de pesos y fuerzas.</li>
-        <li><strong>Supervivencia:</strong> Armas que se rompen y gestión de recursos.</li>
-      </ul>
+
+    <h2>Mecánicas Principales</h2>
+
+    <div class="pillar-list">
+
+      <div class="pillar">
+        <img class="pillar-icon" src="../img/logic_mec_movimiento.jpg" alt="Movimiento">
+        <div class="pillar-text">
+          <span class="pillar-title">Movimiento</span>
+          <span class="pillar-info">
+            Escalar, planear (paravela), nadar.
+          </span>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <img class="pillar-icon" src="../img/logic_mec_fisica.jpg" alt="Motor de física">
+        <div class="pillar-text">
+          <span class="pillar-title">Motor de Física</span>
+          <span class="pillar-info">
+            Interacción realista de pesos y fuerzas.
+          </span>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <img class="pillar-icon" src="../img/logic_mec_supervivencia.jpg" alt="Supervivencia">
+        <div class="pillar-text">
+          <span class="pillar-title">Supervivencia</span>
+          <span class="pillar-info">
+            Armas que se rompen y gestión de recursos.
+          </span>
+        </div>
+      </div>
+
     </div>
+
   </div>
 </div>
 
+<!-- ENTORNO (CORREGIDO) -->
 <div id="modal-entorno" class="logic-modal">
   <div class="modal-content">
     <button class="modal-close">X</button>
     <h2>Interacción con el Entorno</h2>
-    <ul>
-      <li><strong>Clima Dinámico:</strong> Rayos, lluvia y temperaturas extremas afectan al jugador.</li>
-      <li><strong>Motor Químico:</strong> Reacciones lógicas (fuego derrite hielo, agua conduce electricidad).</li>
-    </ul>
+
+    <div class="pillar-list">
+      <div class="pillar">
+        <img class="pillar-icon" src="../img/logic_entorno_clima.jpg" alt="Clima dinámico">
+        <div class="pillar-text">
+          <span class="pillar-title">Clima Dinámico</span>
+          <span class="pillar-info">
+            Rayos, lluvia y temperaturas extremas afectan al jugador.
+          </span>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <img class="pillar-icon" src="../img/logic_entorno_quimico.jpg" alt="Motor químico">
+        <div class="pillar-text">
+          <span class="pillar-title">Motor Químico</span>
+          <span class="pillar-info">
+            Reacciones lógicas: el fuego derrite el hielo, el agua conduce electricidad,
+            el metal atrae rayos.
+          </span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
+<!-- PROGRESIÓN -->
 <div id="modal-progresion" class="logic-modal">
   <div class="modal-content">
     <button class="modal-close">X</button>
+
     <h2>Progresión</h2>
-    <ul>
-      <li><strong>Santuarios:</strong> Puzles cortos para obtener Orbes de Espíritu.</li>
-      <li><strong>Mejoras:</strong> Canjear orbes por Corazones o Resistencia (Stamina).</li>
-      <li><strong>Equipo:</strong> Vestimentas con efectos situacionales (ej. resistencia al frío).</li>
-    </ul>
+
+    <div class="pub-grid">
+
+      <div class="pub-item pub-vertical">
+        <img class="pub-img" src="../img/logic_prog_santuarios.jpg" alt="Santuarios">
+        <span class="pub-label">Santuarios</span>
+        <span class="pub-value">Puzles cortos para obtener Orbes de Espíritu.</span>
+      </div>
+
+      <div class="pub-item pub-vertical">
+        <img class="pub-img" src="../img/logic_prog_mejoras.jpg" alt="Mejoras">
+        <span class="pub-label">Mejoras</span>
+        <span class="pub-value">
+          Canjear orbes por Corazones o Resistencia (Stamina).
+        </span>
+      </div>
+
+      <div class="pub-item pub-vertical">
+        <img class="pub-img" src="../img/logic_prog_equipo.jpg" alt="Equipo">
+        <span class="pub-label">Equipo</span>
+        <span class="pub-value">
+          Vestimentas con efectos situacionales (ej. resistencia al frío).
+        </span>
+      </div>
+
+    </div>
+
   </div>
 </div>
 
+<!-- OBJETIVOS -->
 <div id="modal-objetivos" class="logic-modal">
   <div class="modal-content">
     <button class="modal-close">X</button>
+
     <h2>Objetivos del Juego</h2>
-    <ul>
-      <li><strong>Objetivo Final:</strong> Derrotar a Ganon (disponible desde el inicio).</li>
-      <li><strong>Libertad:</strong> Puedes ignorar la historia y solo explorar.</li>
-      <li><strong>Secundarios:</strong> 120 Santuarios, 900 Semillas Kolog y misiones.</li>
-    </ul>
+
+    <div class="pub-grid">
+
+      <div class="pub-item pub-vertical">
+        <img class="pub-img" src="../img/logic_obj_final.jpg" alt="Objetivo final">
+        <span class="pub-label">Objetivo Final</span>
+        <span class="pub-value">
+          Derrotar a Ganon (disponible desde el inicio).
+        </span>
+      </div>
+
+      <div class="pub-item pub-vertical">
+        <img class="pub-img" src="../img/logic_obj_libertad.jpg" alt="Libertad">
+        <span class="pub-label">Libertad</span>
+        <span class="pub-value">
+          Puedes ignorar la historia y solo explorar.
+        </span>
+      </div>
+
+      <div class="pub-item pub-vertical">
+        <img class="pub-img" src="../img/logic_obj_secundarios.jpg" alt="Secundarios">
+        <span class="pub-label">Secundarios</span>
+        <span class="pub-value">
+          120 Santuarios, 900 Semillas Kolog y misiones.
+        </span>
+      </div>
+
+    </div>
+
   </div>
 </div>
-
 <script src="../js/logica.js"></script>
 </body>
 </html>

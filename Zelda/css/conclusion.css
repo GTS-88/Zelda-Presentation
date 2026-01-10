@@ -1,4 +1,3 @@
-
 .conclusion-screen {
   background-image: url("../img/background-conclusion.jpeg");
   background-repeat: no-repeat;
@@ -13,224 +12,242 @@
   padding-bottom: 1rem;
 }
 
-
-
+/* MAIN: ocupamos toda la altura y centramos, pero controlando el alto interno */
 .conclusion-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
+/* PANEL: limitado en altura para que todo quepa en la ventana */
 .conclusion-panel {
-    background-color: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 15px;
-    padding: 40px;
-    max-width: 80%;
-    margin: 0 auto;
-    color: #e0e0e0;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 30px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  color: #e0e0e0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
+  /* CLAVE: no dejar que sobrepase la altura visible */
+  max-height: calc(100vh - 190px); /* nav + título + márgenes */
+  overflow-y: auto;
 }
 
+/* CABECERA DENTRO DEL PANEL (título de la sección está fuera) */
 .con-header {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .con-main-title {
-    font-size: 2.5rem;
-    color: white;
-    text-shadow: 0 0 10px #4dc3ff;
-    margin-bottom: 10px;
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 0 0 10px #4dc3ff;
+  margin-bottom: 10px;
 }
 
 .con-subtitle {
-    color: #ccc;
-    font-style: italic;
-    margin: 0;
+  color: #ccc;
+  font-style: italic;
+  margin: 0;
 }
 
+/* AWARDS GRID – un poco más compacto para que quepa mejor */
 .awards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--dark-green); /* Fondo oscuro para que resalte el cristal */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--dark-green);
+  border-radius: 12px;
 }
 
 .award-card {
-    background: var(--glass);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    padding: 2.5rem;
-    text-align: center;
-    color: white;
-    transition: all 0.4s ease;
-    position: relative;
-    overflow: hidden;
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .award-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--gold);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transform: translateY(-6px);
+  border-color: var(--gold);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .award-card.highlight {
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(0, 0, 0, 0.4));
-    border: 1px solid var(--gold);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(0, 0, 0, 0.4));
+  border: 1px solid var(--gold);
 }
 
 .card-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
 }
 
 .award-number {
-    font-size: 3.5rem;
-    font-weight: bold;
-    margin: 0;
-    color: var(--gold);
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  color: var(--gold);
 }
 
 .award-label {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.9rem;
-    opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  opacity: 0.8;
 }
 
 .award-title {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--gold);
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+  color: var(--gold);
 }
 
 .badge {
-    display: inline-block;
-    background: var(--gold);
-    color: rgb(255, 255, 255);
-    padding: 0.3rem 1rem;
-    border-radius: 50px;
-    font-weight:1000;
-    font-size: 0.7rem;
-    margin-top: 1rem;
+  display: inline-block;
+  background: var(--gold);
+  color: rgb(255, 255, 255);
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+  font-weight: 1000;
+  font-size: 0.7rem;
+  margin-top: 0.8rem;
 }
 
-/* CARD DE IMAGEN */
+/* CARD DE IMAGEN PEQUEÑA (si la usas en el grid) */
 .image-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-    width: 100%;
-    max-height: 100%; /* Evita agrandar la imagen */
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+  width: 100%;
+  max-height: 100%;
 }
 
 .image-card img {
-    width: 100%;
-    height: auto; /* Ajusta la imagen sin deformarla */
-    object-fit:fill;
-    display: block;
+  width: 100%;
+  height: auto;
+  object-fit: fill;
+  display: block;
 }
 
 .image-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.2));
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.2));
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
+/* BLOQUE IMAGEN PRINCIPAL + TEXTO */
 .image-main-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 25px;
 }
 
-.image-main-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 40px;
-}
-
-/* Imagen principal contenida */
+/* Imagen principal contenida y con altura limitada */
 .image-main {
-    width: 100%;
-    max-height: 40vh; /* Altura máxima para mantener proporción */
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  max-height: 35vh;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-main img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Mantiene toda la imagen visible */
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 /* Texto principal debajo */
 .main-text {
-    margin-top: 15px;
-    font-size: 1.1rem;
-    line-height: 1.5;
-    color: #e0e0e0;
-    text-align: center;
-    max-width: 900px;
+  margin-top: 12px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #e0e0e0;
+  text-align: center;
+  max-width: 900px;
 }
 
-
+/* Grid de imágenes opcional */
 .image-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
 }
 
 .image-grid .image-card {
-    max-height: 300px; /* Ajusta tamaño máximo */
+  max-height: 260px;
 }
 
-/* Texto */
+/* Texto dentro del panel */
 .con-title {
-    color: #4dc3ff;
-    font-family: 'Bitter', serif;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #4dc3ff;
-    display: inline-block;
-    padding-bottom: 5px;
+  color: #4dc3ff;
+  font-family: 'Bitter', serif;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #4dc3ff;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
 .con-text {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    text-align: justify;
-    margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 10px;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .image-main {
-        max-height: 300px;
-    }
-    .image-grid {
-        grid-template-columns: 1fr; /* Se apilan en móvil */
-    }
-    .image-grid .image-card {
-        max-height: 260px;
-    }
+
+  .conclusion-panel {
+    max-height: none;   /* En móviles permitimos scroll de página */
+  }
+
+  .image-main {
+    max-height: 260px;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-grid .image-card {
+    max-height: 220px;
+  }
+}
+
+/* Si la pantalla es muy baja (portátiles pequeños), relajamos límite */
+@media (max-height: 750px) {
+  .conclusion-panel {
+    max-height: calc(100vh - 150px);
+  }
 }

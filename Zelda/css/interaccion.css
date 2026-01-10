@@ -6,32 +6,23 @@
 }
 
 
-
-/*MODALES*/
-
-.logic-modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,.85);
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  backdrop-filter: blur(8px);
-}
-
-.logic-modal.active { display: flex; }
-
 .modal-content {
-  background: var(--arena);
-  border: 5px solid var(--dorado);
+  background: var(--zelda-arena);
+  border: 6px solid var(--zelda-dorado);
   border-radius: 18px;
-  padding: 35px;
-  max-width: 650px;
-  width: 85%;
+  padding: 50px 60px;
+  max-width: 1600px;
+  width: 92%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: fit-content !important;
+  box-shadow: 18px 18px 0 rgba(0,0,0,0.65);
+  font-size: 1.9rem;
+  line-height: 1.7;
   position: relative;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-  animation: fadeInUp 0.3s ease-out;
+  animation: modal-zoom .35s ease;
 }
 
 @keyframes fadeInUp {
@@ -48,25 +39,3 @@
   text-align: center;
   border-bottom: 3px solid var(--dorado);
 }
-
-.modal-content ul { font-size: 1.1rem; line-height: 1.6; color: #1a1a1a; padding-left: 20px; }
-.modal-content li { margin-bottom: 12px; }
-.modal-content strong { color: var(--azul); }
-
-.modal-close {
-  position: absolute;
-  top: -15px;
-  right: -15px;
-  background: #c0392b;
-  color: white;
-  border: 3px solid var(--dorado);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 1.2rem;
-  transition: transform 0.2s;
-}
-
-.modal-close:hover { transform: scale(1.1); }

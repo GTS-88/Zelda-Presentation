@@ -23,3 +23,26 @@ document.addEventListener('keydown', (e) => {
         });
     }
 });
+
+  document.querySelectorAll('.pillar-audio-btn').forEach(btn => {
+    const audioId = btn.dataset.audio;
+    const audioEl = document.getElementById(audioId);
+
+    if (!audioEl) return;
+
+    // Play / pause SOLO de su propio audio
+    btn.addEventListener('click', () => {
+      if (audioEl.paused) {
+        audioEl.play();
+        btn.textContent = '⏸';
+      } else {
+        audioEl.pause();
+        btn.textContent = '▶';
+      }
+    });
+
+    // Cuando termine ese audio, resetea solo su botón
+    audioEl.addEventListener('ended', () => {
+      btn.textContent = '▶';
+    });
+  });

@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/datos.css">
-    <!-- NUEVO: estilos específicos de esta página -->
     <link rel="stylesheet" href="../css/sonido.css">
 </head>
 
@@ -53,100 +52,242 @@
 
     </section>
 </main>
-
+<!-- 01 · TIPOS DE SONIDOS -->
 <div id="modal-tipos-sonido" class="intro-modal">
-    <div class="modal-content">
-        <button class="modal-close">X</button>
-        <h2>01 · Tipos de Sonidos Usados</h2>
-        <div class="pillar-list">
-            <div class="pillar">
-                <img class="pillar-icon" src="../img/ambientales.png" alt="icono">
-                <div class="pillar-text">
-                    <span class="pillar-title">Sonidos Ambientales (Paisaje Sonoro)</span>
-                    <span class="pillar-info">Grabaciones reales de naturaleza. El audio es dinámico: la lluvia suena diferente sobre madera, roca o metal, y el viento cambia de tono según la altitud.</span>
-                </div>
-            </div>
-            <div class="pillar">
-                <img class="pillar-icon" src="../img/efectossonido.png" alt="icono">
-                <div class="pillar-text">
-                    <span class="pillar-title">Efectos de Sonido (Foley y SFX)</span>
-                    <span class="pillar-info">Énfasis en la materialidad. El choque de las espadas, el roce de la ropa y los pasos de Link varían según el peso del equipo y el terreno.</span>
-                </div>
-            </div>
-            <div class="pillar">
-                <img class="pillar-icon" src="../img/musicadefondo.png" alt="icono">
-                <div class="pillar-text">
-                    <span class="pillar-title">Música de Fondo (BGM Minimalista)</span>
-                    <span class="pillar-info">A diferencia de otros Zelda, aquí la música es fragmentada. El piano aparece de forma sutil para no opacar los sonidos de la naturaleza.</span>
-                </div>
-            </div>
+  <div class="modal-content">
+    <button class="modal-close">X</button>
+    <h2>01 · Tipos de Sonidos Usados</h2>
+
+    <div class="pillar-list">
+
+      <div class="pillar">
+        <img class="pillar-icon" src="../img/ambientales.png" alt="icono">
+        <div class="pillar-text">
+          <span class="pillar-title">Sonidos Ambientales (Paisaje Sonoro)</span>
+          <span class="pillar-info">
+            Grabaciones reales de naturaleza. El audio es dinámico: la lluvia suena diferente sobre madera, roca o metal, y el viento cambia de tono según la altitud.
+          </span>
+
+          <!-- Botón + audio -->
+          <button class="pillar-audio-btn" data-audio="audio-ambientales">
+            ▶
+          </button>
+          <audio id="audio-ambientales">
+            <source src="../audio/sample_ambientales.mp3" type="audio/mpeg">
+          </audio>
         </div>
+      </div>
+
+      <div class="pillar">
+        <img class="pillar-icon" src="../img/efectossonido.png" alt="icono">
+        <div class="pillar-text">
+          <span class="pillar-title">Efectos de Sonido (Foley y SFX)</span>
+          <span class="pillar-info">
+            Énfasis en la materialidad. El choque de las espadas, el roce de la ropa y los pasos de Link varían según el peso del equipo y el terreno.
+          </span>
+
+          <button class="pillar-audio-btn" data-audio="audio-efectos">
+            ▶
+          </button>
+          <audio id="audio-efectos">
+            <source src="../audio/sample_efectos.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <img class="pillar-icon" src="../img/musicadefondo.png" alt="icono">
+        <div class="pillar-text">
+          <span class="pillar-title">Música de Fondo (BGM Minimalista)</span>
+          <span class="pillar-info">
+            A diferencia de otros Zelda, aquí la música es fragmentada. El piano aparece de forma sutil para no opacar los sonidos de la naturaleza.
+          </span>
+
+          <button class="pillar-audio-btn" data-audio="audio-bgm">
+            ▶
+          </button>
+          <audio id="audio-bgm">
+            <source src="../audio/sample_bgm.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+
     </div>
+  </div>
 </div>
 
+<!-- 02 · INSTRUMENTOS -->
 <div id="modal-instrumentos" class="intro-modal">
-    <div class="modal-content">
-        <button class="modal-close">X</button>
-        <h2>02 · Instrumentación y Texturas</h2>
-        <div class="pillar-list">
-            <div class="pillar">
-                <img class="pillar-icon" src="../img/pianocorazon.png" alt="icono">
-                <div class="pillar-text">
-                    <span class="pillar-title">El Corazón: El Piano</span>
-                    <span class="pillar-info">Instrumento protagonista. Se usa de forma "percusiva" con notas aisladas para representar la soledad y el espacio vacío de Hyrule.</span>
-                </div>
-            </div>
-            <div class="pillar">
-                <img class="pillar-icon" src="../img/instrumentos.png" alt="icono">
-                <div class="pillar-text">
-                    <span class="pillar-title">Instrumentos Étnicos</span>
-                    <span class="pillar-info">
-                        <b>Shinobue/Erhu:</b> Cultura Sheikah.<br>
-                        <b>Acordeón:</b> Tradición oral (Nyel).<br>
-                        <b>Dulcimer/Gaitas:</b> Vida rústica en las aldeas.
-                    </span>
-                </div>
-            </div>
-            <div class="pillar">
-                <img class="pillar-icon" src="../img/sintesyorquesta.png" alt="icono">
-                <div class="pillar-text">
-                    <span class="pillar-title">Sintetizadores y Orquesta</span>
-                    <span class="pillar-info">Sintetizadores fríos para la tecnología ancestral vs. Orquesta completa (metales y percusión Taiko) para combates épicos.</span>
-                </div>
-            </div>
+  <div class="modal-content">
+    <button class="modal-close">X</button>
+    <h2>02 · Instrumentación y Texturas</h2>
+
+    <div class="pillar-list">
+
+      <div class="pillar">
+        <img class="pillar-icon" src="../img/pianocorazon.png" alt="icono">
+        <div class="pillar-text">
+          <span class="pillar-title">El Corazón: El Piano</span>
+          <span class="pillar-info">
+            Instrumento protagonista. Se usa de forma "percusiva" con notas aisladas para representar la soledad y el espacio vacío de Hyrule.
+          </span>
+
+          <button class="pillar-audio-btn" data-audio="audio-piano">
+            ▶
+          </button>
+          <audio id="audio-piano">
+            <source src="../audio/sample_piano.mp3" type="audio/mpeg">
+          </audio>
         </div>
+      </div>
+<div class="pillar">
+  <img class="pillar-icon" src="../img/instrumentos.png" alt="icono">
+
+  <div class="pillar-text">
+
+    <span class="pillar-title">Instrumentos Étnicos</span>
+
+    <div class="instrument-grid">
+
+      <!-- ITEM 1 -->
+      <div class="instrument-item">
+        <b>Shinobue / Erhu</b>
+
+        <div class="instrument-bottom">
+          <span class="pillar-info">Cultura Sheikah</span>
+
+          <button class="pillar-audio-btn" data-audio="audio-shinobue">
+            ▶
+          </button>
+          <audio id="audio-shinobue">
+            <source src="../audio/sample_shinobue.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+
+
+      <!-- ITEM 2 -->
+      <div class="instrument-item">
+        <b>Acordeón</b>
+
+        <div class="instrument-bottom">
+          <span class="pillar-info">Tradición oral (Nyel)</span>
+
+          <button class="pillar-audio-btn" data-audio="audio-acordeon">
+            ▶
+          </button>
+          <audio id="audio-acordeon">
+            <source src="../audio/sample_acordeon.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+
+
+      <!-- ITEM 3 -->
+      <div class="instrument-item">
+        <b>Dulcimer / Gaitas</b>
+
+        <div class="instrument-bottom">
+          <span class="pillar-info">Vida rústica en aldeas</span>
+
+          <button class="pillar-audio-btn" data-audio="audio-dulcimer">
+            ▶
+          </button>
+          <audio id="audio-dulcimer">
+            <source src="../audio/sample_dulcimer.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+
     </div>
+
+  </div>
 </div>
 
-<div id="modal-relevancia" class="intro-modal">
-    <div class="modal-content">
-        <button class="modal-close">X</button>
-        <h2>03 · Relevancia en el Gameplay</h2>
-        <div class="pillar-list">
-            <div class="pillar">
-                <img class="pillar-icon" src="../img/inmersion.png" alt="icono">
-                <div class="pillar-text">
-                    <span class="pillar-title">Inmersión y Soledad</span>
-                    <span class="pillar-info">La música no "dicta" emociones constantes. El silencio se usa como herramienta para enfatizar la libertad de exploración.</span>
-                </div>
-            </div>
-            <div class="pillar">
-                <img class="pillar-icon" src="../img/informacion.png" alt="icono">
-                <div class="pillar-text">
-                    <span class="pillar-title">Información y Alerta (IA Musical)</span>
-                    <span class="pillar-info">Música reactiva. El piano frenético de un Guardián informa del peligro antes de verlo, generando pánico instintivo.</span>
-                </div>
-            </div>
-            <div class="pillar">
-                <img class="pillar-icon" src="../img/conexionpasado.png" alt="icono">
-                <div class="pillar-text">
-                    <span class="pillar-title">Conexión con el Pasado</span>
-                    <span class="pillar-info">Uso de motivos clásicos (Leitmotivs) ocultos y ralentizados en el piano para contar la historia de un reino caído.</span>
-                </div>
-            </div>
+      <div class="pillar">
+        <img class="pillar-icon" src="../img/sintesyorquesta.png" alt="icono">
+        <div class="pillar-text">
+          <span class="pillar-title">Sintetizadores y Orquesta</span>
+          <span class="pillar-info">
+            Sintetizadores fríos para la tecnología ancestral vs. Orquesta completa (metales y percusión Taiko) para combates épicos.
+          </span>
+
+          <button class="pillar-audio-btn" data-audio="audio-sintes-orquesta">
+            ▶
+          </button>
+          <audio id="audio-sintes-orquesta">
+            <source src="../audio/sample_sintes_orquesta.mp3" type="audio/mpeg">
+          </audio>
         </div>
+      </div>
+
     </div>
+  </div>
 </div>
+
+<!-- 03 · RELEVANCIA -->
+<div id="modal-relevancia" class="intro-modal">
+  <div class="modal-content">
+    <button class="modal-close">X</button>
+    <h2>03 · Relevancia en el Gameplay</h2>
+
+    <div class="pillar-list">
+
+      <div class="pillar">
+        <img class="pillar-icon" src="../img/inmersion.png" alt="icono">
+        <div class="pillar-text">
+          <span class="pillar-title">Inmersión y Soledad</span>
+          <span class="pillar-info">
+            La música no "dicta" emociones constantes. El silencio se usa como herramienta para enfatizar la libertad de exploración.
+          </span>
+
+          <button class="pillar-audio-btn" data-audio="audio-inmersion">
+            ▶
+          </button>
+          <audio id="audio-inmersion">
+            <source src="../audio/sample_inmersion.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <img class="pillar-icon" src="../img/informacion.png" alt="icono">
+        <div class="pillar-text">
+          <span class="pillar-title">Información y Alerta (IA Musical)</span>
+          <span class="pillar-info">
+            Música reactiva. El piano frenético de un Guardián informa del peligro antes de verlo, generando pánico instintivo.
+          </span>
+
+          <button class="pillar-audio-btn" data-audio="audio-alerta">
+            ▶
+          </button>
+          <audio id="audio-alerta">
+            <source src="../audio/sample_alerta.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <img class="pillar-icon" src="../img/conexionpasado.png" alt="icono">
+        <div class="pillar-text">
+          <span class="pillar-title">Conexión con el Pasado</span>
+          <span class="pillar-info">
+            Uso de motivos clásicos (Leitmotivs) ocultos y ralentizados en el piano para contar la historia de un reino caído.
+          </span>
+
+          <button class="pillar-audio-btn" data-audio="audio-leitmotiv">
+            ▶
+          </button>
+          <audio id="audio-leitmotiv">
+            <source src="../audio/sample_leitmotiv.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 
 <footer class="footer">
     Selecciona una tarjeta para ampliar · Pulsa ESC para cerrar modales

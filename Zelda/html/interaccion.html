@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="../css/interaccion.css">
   <link rel="stylesheet" href="../css/logica.css">
   <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/datos.css">
+  <link rel="stylesheet" href="../css/intro.css">
 </head>
 
 <body>
@@ -66,26 +68,75 @@
 </main>
 
 <div id="modal-plataformas" class="logic-modal">
-  <div class="modal-content">
+  <div class="modal-content modal-publicacion-content">
     <button class="modal-close">X</button>
     <h2>Plataforma y Control</h2>
-    <ul>
-      <li><strong>Exclusividad:</strong> Diseñado para Nintendo Switch y Wii U.</li>
-      <li><strong>Mando Obligatorio:</strong> Controles optimizados para el uso de sticks y botones físicos.</li>
-      <li><strong>Emulación:</strong> Posible en PC, pero requiere mando para una experiencia natural.</li>
-    </ul>
+
+    <div class="pub-grid">
+
+      <div class="pub-item pub-vertical">
+        <img class="pub-img" src="../img/logic_plataformas_exclusividad.jpg" alt="Exclusividad plataformas">
+        <span class="pub-label">Exclusividad</span>
+        <span class="pub-value">
+          Diseñado para Nintendo Switch y Wii U.
+        </span>
+      </div>
+
+      <div class="pub-item pub-vertical">
+        <img class="pub-img" src="../img/logic_plataformas_mando.jpg" alt="Mando obligatorio">
+        <span class="pub-label">Mando Obligatorio</span>
+        <span class="pub-value">
+          Controles optimizados para el uso de sticks y botones físicos.
+        </span>
+      </div>
+
+      <div class="pub-item pub-vertical">
+        <img class="pub-img" src="../img/logic_plataformas_emulacion.jpg" alt="Emulación en PC">
+        <span class="pub-label">Emulación</span>
+        <span class="pub-value">
+          Posible en PC, pero requiere mando para una experiencia natural.
+        </span>
+      </div>
+
+    </div>
+
   </div>
 </div>
 
+
 <div id="modal-organica" class="logic-modal">
-  <div class="modal-content">
+  <div class="modal-content modal-publicacion-content">
     <button class="modal-close">X</button>
     <h2>Interacción y Controles</h2>
-    <ul>
-      <li><strong>Libertad Total:</strong> Exploración no lineal de montañas, ríos y bosques.</li>
-      <li><strong>Controles Contextuales:</strong> Botones que se adaptan según si interactúas con un NPC, objeto o enemigo.</li>
-      <li><strong>Puntería:</strong> Uso de giroscopio para mayor velocidad y precisión con el arco.</li>
-    </ul>
+
+    <div class="pub-grid">
+
+      <div class="pub-item pub-vertical">
+        <img class="pub-img" src="../img/logic_organica_libertad.jpg" alt="Libertad total">
+        <span class="pub-label">Libertad Total</span>
+        <span class="pub-value">
+          Exploración no lineal de montañas, ríos y bosques.
+        </span>
+      </div>
+
+      <div class="pub-item pub-vertical">
+        <img class="pub-img" src="../img/logic_organica_controles.jpg" alt="Controles contextuales">
+        <span class="pub-label">Controles Contextuales</span>
+        <span class="pub-value">
+          Botones que se adaptan según si interactúas con un NPC, objeto o enemigo.
+        </span>
+      </div>
+
+      <div class="pub-item pub-vertical">
+        <img class="pub-img" src="../img/logic_organica_punteria.jpg" alt="Puntería giroscopio">
+        <span class="pub-label">Puntería</span>
+        <span class="pub-value">
+          Uso de giroscopio para mayor velocidad y precisión con el arco.
+        </span>
+      </div>
+
+    </div>
+
   </div>
 </div>
 
@@ -93,10 +144,31 @@
   <div class="modal-content">
     <button class="modal-close">X</button>
     <h2>Motor Químico</h2>
-    <ul>
-      <li><strong>Sistémica:</strong> Los elementos (fuego, agua, electricidad, frío) reaccionan entre sí de forma lógica.</li>
-      <li><strong>Creatividad:</strong> No se limita a "apretar botones", fomenta el uso de objetos para resolver situaciones.</li>
-    </ul>
+
+    <div class="pillar-list">
+
+      <div class="pillar">
+        <img class="pillar-icon" src="../img/logic_quimico_sistemica.jpg" alt="Sistema de elementos">
+        <div class="pillar-text">
+          <span class="pillar-title">Sistémica</span>
+          <span class="pillar-info">
+            Los elementos (fuego, agua, electricidad, frío) reaccionan entre sí de forma lógica.
+          </span>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <img class="pillar-icon" src="../img/logic_quimico_creatividad.jpg" alt="Creatividad jugable">
+        <div class="pillar-text">
+          <span class="pillar-title">Creatividad</span>
+          <span class="pillar-info">
+            No se limita a apretar botones: fomenta el uso de objetos para resolver situaciones.
+          </span>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </div>
 
@@ -104,22 +176,68 @@
   <div class="modal-content">
     <button class="modal-close">X</button>
     <h2>Piedra Sheikah</h2>
-    <ul>
-      <li><strong>Runas Principales:</strong> Bombas remotas, Magnesis (imán), Cryonis (hielo) y Stasis (paralizador).</li>
-      <li><strong>Mecánica Disruptiva:</strong> Permite romper las reglas tradicionales del juego mediante la lógica física.</li>
-    </ul>
+
+    <div class="pillar-list">
+
+      <div class="pillar">
+        <img class="pillar-icon" src="../img/logic_sheikah_runas.jpg" alt="Runas principales">
+        <div class="pillar-text">
+          <span class="pillar-title">Runas Principales</span>
+          <span class="pillar-info">
+            Bombas remotas, Magnesis (imán), Cryonis (hielo) y Stasis (paralizador).
+          </span>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <img class="pillar-icon" src="../img/logic_sheikah_disruptiva.jpg" alt="Mecánica disruptiva">
+        <div class="pillar-text">
+          <span class="pillar-title">Mecánica Disruptiva</span>
+          <span class="pillar-info">
+            Permite romper las reglas tradicionales del juego mediante la lógica física.
+          </span>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </div>
 
+
 <div id="modal-fluidez" class="logic-modal">
-  <div class="modal-content">
+  <div class="modal-content modal-publicacion-content">
     <button class="modal-close">X</button>
     <h2>Fluidez y Dificultad</h2>
-    <ul>
-      <li><strong>Sin Cargas:</strong> El mundo está siempre activo, manteniendo al jugador en inmersión constante.</li>
-      <li><strong>Dificultad Justa:</strong> La muerte suele ser consecuencia de una mala interacción con el entorno, no de los controles.</li>
-      <li><strong>Switch vs Wii U:</strong> La versión de Switch ofrece 900p y vibración HD; Wii U se queda en 720p.</li>
-    </ul>
+
+    <div class="pub-grid">
+
+      <div class="pub-item pub-vertical">
+        <img class="pub-img" src="../img/logic_fluidez_cargas.jpg" alt="Sin cargas">
+        <span class="pub-label">Sin Cargas</span>
+        <span class="pub-value">
+          El mundo está siempre activo, manteniendo al jugador en inmersión constante.
+        </span>
+      </div>
+
+      <div class="pub-item pub-vertical">
+        <img class="pub-img" src="../img/logic_fluidez_dificultad.jpg" alt="Dificultad justa">
+        <span class="pub-label">Dificultad Justa</span>
+        <span class="pub-value">
+          La muerte suele ser consecuencia de una mala interacción con el entorno, no de los controles.
+        </span>
+      </div>
+
+      <div class="pub-item pub-vertical">
+        <img class="pub-img" src="../img/logic_fluidez_switch_wiiu.jpg" alt="Switch vs Wii U">
+        <span class="pub-label">Switch vs Wii U</span>
+        <span class="pub-value">
+          Switch ofrece 900p y vibración HD; Wii U se queda en 720p.
+        </span>
+      </div>
+
+    </div>
+
   </div>
 </div>
 
