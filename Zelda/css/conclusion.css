@@ -53,6 +53,75 @@
     margin: 0;
 }
 
+.awards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--dark-green); /* Fondo oscuro para que resalte el cristal */
+}
+
+.award-card {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    color: white;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.award-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--gold);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.award-card.highlight {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(0, 0, 0, 0.4));
+    border: 1px solid var(--gold);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.award-number {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: var(--gold);
+}
+
+.award-label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.award-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--gold);
+}
+
+.badge {
+    display: inline-block;
+    background: var(--gold);
+    color: rgb(255, 255, 255);
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    font-weight:1000;
+    font-size: 0.7rem;
+    margin-top: 1rem;
+}
+
 /* CARD DE IMAGEN */
 .image-card {
     position: relative;
