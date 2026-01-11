@@ -253,7 +253,7 @@
 .pillar-icon {
   width: 95px;
   height: 95px;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 10px;
   border: 4px solid var(--zelda-dorado);
   background: white;
