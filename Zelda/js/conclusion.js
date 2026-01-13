@@ -19,3 +19,21 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCount();
     });
 });
+
+const imgConclusion   = document.getElementById("conclusion-image");
+const videoConclusion = document.getElementById("conclusion-video");
+const imageMainBox    = document.querySelector(".image-main");
+
+if (imgConclusion && videoConclusion && imageMainBox) {
+
+  imgConclusion.addEventListener("click", () => {
+    imageMainBox.classList.add("playing");
+    videoConclusion.currentTime = 0;
+    videoConclusion.play().catch(() => {});
+  });
+
+
+  videoConclusion.addEventListener("ended", () => {
+    imageMainBox.classList.remove("playing");
+  });
+}

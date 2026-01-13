@@ -233,7 +233,20 @@
   text-align: center;
   max-width: 900px;
 }
+.conclusion-video {
+  display: none;
+  width: 100%;
+  border-radius: 16px;
+}
 
+/* Cuando está “reproduciendo”: ocultar imagen y mostrar vídeo */
+.image-main.playing img {
+  display: none;
+}
+
+.image-main.playing .conclusion-video {
+  display: block;
+}
 
 .image-grid {
   display: grid;
