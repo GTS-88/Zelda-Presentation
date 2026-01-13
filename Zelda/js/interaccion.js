@@ -3,6 +3,7 @@ const closeBtns = document.querySelectorAll(".modal-close");
 
 cards.forEach(card => {
   card.addEventListener("click", () => {
+    playClick() 
     const id = card.dataset.card;
     const modal = document.getElementById(`modal-${id}`);
     if (modal) modal.classList.add("active");
@@ -27,3 +28,11 @@ document.addEventListener("keydown", e => {
     if (activeModal) activeModal.classList.remove("active");
   }
 });
+
+const sfxClick = document.getElementById("sfx-click");
+function playClick() {
+  if (sfxClick) {
+    sfxClick.currentTime = 0;
+    sfxClick.play().catch(() => {});
+  }
+}

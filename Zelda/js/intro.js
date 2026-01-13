@@ -5,6 +5,7 @@ document.querySelectorAll(".intro-card").forEach(card => {
   if (!modal) return;
 
   card.addEventListener("click", () => {
+    playClick()
     modal.classList.add("active");
   });
 });
@@ -19,6 +20,7 @@ document.querySelectorAll(".modal-close").forEach(btn => {
 // Cerrar modal al hacer click fuera del contenido
 document.querySelectorAll(".intro-modal").forEach(modal => {
   modal.addEventListener("click", e => {
+
     if (e.target === modal) {
       modal.classList.remove("active");
     }
@@ -38,3 +40,11 @@ timelineItems.forEach(item => {
     }
   });
 });
+
+const sfxClick = document.getElementById("sfx-click");
+function playClick() {
+  if (sfxClick) {
+    sfxClick.currentTime = 0;
+    sfxClick.play().catch(() => {});
+  }
+}

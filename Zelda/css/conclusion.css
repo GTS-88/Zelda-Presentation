@@ -7,7 +7,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
   min-height: 100vh;
   padding-bottom: 1rem;
 }
@@ -16,13 +15,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 100vh;
   padding: 20px;
   box-sizing: border-box;
 }
 
-/* PANEL: limitado en altura para que todo quepa en la ventana */
 .conclusion-panel {
   background-color: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(5px);
@@ -34,11 +32,8 @@
   margin: 0 auto;
   color: #e0e0e0;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  max-height: calc(100vh - 190px);
-  overflow-y: auto;
-}
 
-/* CABECERA DENTRO DEL PANEL (título de la sección está fuera) */
+
 .con-header {
   text-align: center;
   margin-bottom: 30px;
@@ -68,7 +63,7 @@
 }
 
 .award-card {
-  /* ARREGLAR EL TYPO: era "irgba" */
+
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.92),

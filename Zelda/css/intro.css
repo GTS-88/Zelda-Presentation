@@ -375,7 +375,7 @@
   margin-top: 10px;
 }
 
-/* ========== MODAL LANZAMIENTO (visual con foto) ========== */
+/* ========== MODAL LANZAMIENTO ========== */
 
 .modal-publicacion-content {
   max-width: 80%;
@@ -419,8 +419,8 @@
 
 /* COLUMNA IMAGEN */
 .pub-img {
-  width: 140px;
-  height: 90px;
+  width: 7rem;
+  height: 6rem;
   border: 3px solid var(--azul-sheikah);
   border-radius: 8px;
   margin-right: 20px;

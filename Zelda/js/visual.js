@@ -1,5 +1,6 @@
 document.querySelectorAll('.datos-card').forEach(card => {
     card.addEventListener('click', () => {
+        playClick() 
         const id = card.getAttribute('data-card');
         if (id) {
             const modal = document.getElementById('modal-' + id);
@@ -21,3 +22,11 @@ document.addEventListener('keydown', (e) => {
         });
     }
 });
+
+const sfxClick = document.getElementById("sfx-click");
+function playClick() {
+  if (sfxClick) {
+    sfxClick.currentTime = 0;
+    sfxClick.play().catch(() => {});
+  }
+}
